@@ -116,3 +116,43 @@ CREATE TABLE Orders (
     OrderDate date DEFAULT GETDATE()
 );
 ```
+
+### Q5: What is FOREIGN KEY?  
+> The FOREIGN KEY constraint is used to prevent actions that would destroy links between tables(Transver Dependency).
+
+>A FOREIGN KEY is a field (or collection of fields) in one table, that refers to the PRIMARY KEY in another table
+
+**Create**
+```bash
+CREATE TABLE Orders (
+    OrderID int NOT NULL PRIMARY KEY,
+    OrderNumber int NOT NULL,
+    PersonID int FOREIGN KEY REFERENCES Persons(PersonID)
+);
+```
+**Alter**
+```bash
+ALTER TABLE Orders
+ADD CONSTRAINT FK_PersonOrder
+FOREIGN KEY (PersonID) REFERENCES Persons(PersonID);
+```
+**Drop**
+```bash
+ALTER TABLE Orders
+DROP CONSTRAINT FK_PersonOrder;
+```
+
+###  What is the difference between TRUNCATE and DELETE? 
+
+> TRUNCATE is Data definition language (DDL) , Used to remove all the records in the table.
+
+```bash
+
+TRUNCATE TABLE [SQLShackDemo].[dbo].[Employee];
+```
+> Delete is Data manipulation language (DML) , Used to delete specify record in the table based on where clause.
+
+```bash
+DELETE FROM table_name WHERE condition;
+```
+
