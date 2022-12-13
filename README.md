@@ -85,3 +85,23 @@ DELETE FROM #TestTempTable
 BEGIN TRAN 
 DELETE FROM ##TestTempTable
 ```
+### Q3: What is PRIMARY KEY?
+>Primary Key is one of constraint Not Accepted Null and Duplicated data in the column.
+
+>It can be one or more key in the table.
+
+>uniquely identifies each record in a table
+**Create**
+```bash
+CREATE TABLE Persons (
+    ID int NOT NULL PRIMARY KEY,
+    LastName varchar(255) NOT NULL,
+    FirstName varchar(255),
+    Age int
+);
+```
+**Drop**
+```bash
+ALTER TABLE Persons
+DROP CONSTRAINT PK_Person;
+```
