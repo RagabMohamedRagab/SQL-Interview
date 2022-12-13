@@ -105,3 +105,14 @@ CREATE TABLE Persons (
 ALTER TABLE Persons
 DROP CONSTRAINT PK_Person;
 ```
+### Q4: What is DEFAULT?
+> Default is a contraint , Set Default value to column.
+
+**Create**
+```bash
+CREATE TABLE Orders (
+    ID int NOT NULL PRIMARY KEY ,
+    OrderNumber int NOT NULL,
+    OrderDate date DEFAULT GETDATE()
+);
+```
