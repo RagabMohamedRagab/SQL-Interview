@@ -142,7 +142,7 @@ ALTER TABLE Orders
 DROP CONSTRAINT FK_PersonOrder;
 ```
 
-###  What is the difference between TRUNCATE and DELETE? 
+### Q6: What is the difference between TRUNCATE and DELETE? 
 
 > TRUNCATE is Data definition language (DDL) , Used to remove all the records in the table.
 
@@ -155,4 +155,68 @@ TRUNCATE TABLE [SQLShackDemo].[dbo].[Employee];
 ```bash
 DELETE FROM table_name WHERE condition;
 ```
+
+###  Q7: What is Normalisation?
+
+> It is database design used to reduce data redundenty
+> Easier To insertion and updating and deleting.
+> It is Splited large table into Two tables and make relationships between two table.
+- First Normal Form (1NF) 
+   <ol>
+      <li>Removing Repeat group (Multi - values)</li>
+      <li>Removing Repeat Similar Name Columns</li>
+      <li>Data of cell must be saming Data types of the column</li>
+   <ol>
+ **Example**
+ 
+| Id | City |
+| :---:|:---: | 
+| 1    |Giza  | 
+| 1 | Menofia | 
+
+
+     Second Normal Form (2NF)
+  
+    
+      - 1NF
+     -  Removing Partial Dependency (Must be Finding Composite Primary Key To achive Partial Dependency)
+     
+   
+   
+
+
+     
+   
+   | Std_Id | C_Id | grade |course_name|
+| --------------- | --------------- | --------------- | --------------- |
+| 1| 2 |A |C#
+|2 | 3 | B |C++
+     
+    C_Id dependence on course_name , here we must remove this partial dependency.
+     
+     - First Table
+     
+     ------------------------
+     |   Std_Id  |  grade |
+     ------------------------
+     |   1       |     A   |
+     -----------------------
+     |   2       |    B    | 
+     -----------------------
+    - Second Table
+     ------------------------
+     |   C_Id | course_name |
+     ------------------------
+     |    2   |    C#       |
+     -----------------------
+     |    3   |    C++      | 
+     -----------------------
+   #### Here Removing Partial Dependency.
+
+
+### Third Normal Form (3NF)
+> 2NF 
+
+> Removing transitive dependency ,SO must split table into two tables.
+
 
