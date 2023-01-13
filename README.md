@@ -248,7 +248,8 @@ DELETE FROM table_name WHERE condition;
       ON DepartMentL1.ID=EmployeeR2.DeptID;
     
     
-    >Right Join : return Matches rows between tables and not matches in right tables.
+    Right Join : return Matches rows between tables and not matches in right tables.
+    
     
      SELECT ID , Name ,DepartMentName From 
       DepartMentL1 Right/Right OUTER JOIN EmployeeR2 
