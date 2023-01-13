@@ -219,4 +219,13 @@ DELETE FROM table_name WHERE condition;
 
 > Removing transitive dependency ,SO must split table into two tables.
 
-
+## What is the difference between Data Definition Language (DDL) and Data Manipulation Language (DML)?
+> DDL
+ ```bash
+    Alter - Truncate - Drop - Create
+ ```
+ > DML
+ ```bash
+  Update - Delete - Insert 
+  
+ ```
