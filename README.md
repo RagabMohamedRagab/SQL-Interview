@@ -229,3 +229,32 @@ DELETE FROM table_name WHERE condition;
   Update - Delete - Insert 
   
  ```
+## What is join and types ?
+ > Generated A new Table from join between two tables or more.
+  ### Types 
+    
+   Inner join : retuen only Matches rows between tables.
+    
+
+    SELECT ID , Name ,DepartMentName From 
+      DepartMentL1 INNER JOIN EmployeeR2 
+      ON DepartMentL1.ID=EmployeeR2.DeptID;
+    
+    
+   >Left Join : return Matches Rows between tables and not matches in Left Table
+
+     SELECT ID , Name ,DepartMentName From 
+      DepartMentL1 LEFT/LEFT OUTER JOIN EmployeeR2 
+      ON DepartMentL1.ID=EmployeeR2.DeptID;
+    
+    
+    >Right Join : return Matches rows between tables and not matches in right tables.
+    
+     SELECT ID , Name ,DepartMentName From 
+      DepartMentL1 Right/Right OUTER JOIN EmployeeR2 
+      ON DepartMentL1.ID=EmployeeR2.DeptID;
+    
+    
+    
+    
+    
