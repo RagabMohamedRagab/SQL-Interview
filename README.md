@@ -257,5 +257,14 @@ DELETE FROM table_name WHERE condition;
     
     
     
+     Index
+ It Concept in Sql server that we can Create Index in each Column for table to speed retrive data from table.
+     
+     
+    ```
+    CREATE INDEX IX_tbelEmployee_Salary 
+    ON tabelEmployee(Salary ASC)
+    ```
+    
     
     
